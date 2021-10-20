@@ -2,7 +2,7 @@
 <div class="row">
   <div class="q-pa-md items-start q-gutter-md"  v-for="(produtos, index) in produtos" :key="index">
     <q-card class="my-card">
-      <!-- <img :src="item.photo"> -->
+      <img src="https://thumbs.dreamstime.com/b/no-image-available-icon-photo-camera-flat-vector-illustration-132483141.jpg">
       <q-card-section>
         <div class="text-h6">{{produtos.titulo}}</div>
         <div class="text-subtitle2">{{produtos.desc}}</div>
@@ -66,10 +66,11 @@ export default {
       axios
       .get("http://127.0.0.1:8000/api/v1/produtos")
       .then((res) => {
-              console.log(res.data)
+        this.produtos = res.data;
+        console.log(res.data)
       })
       .catch((error) => {
-              console.log(error);
+        console.log(error);
       })
     }
   },
@@ -82,6 +83,6 @@ export default {
 <style lang="sass" scoped>
 .my-card
   width: 100%
-  max-width: 450px
+  max-width: 200px
   flex-direction: row
 </style>
