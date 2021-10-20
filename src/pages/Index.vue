@@ -1,11 +1,11 @@
 <template>
 <div class="row">
-  <div class="q-pa-md items-start q-gutter-md"  v-for="(item, index) in item" :key="index">
+  <div class="q-pa-md items-start q-gutter-md"  v-for="(produtos, index) in produtos" :key="index">
     <q-card class="my-card">
-      <img :src="item.photo">
+      <!-- <img :src="item.photo"> -->
       <q-card-section>
-        <div class="text-h6">{{item.titulo}}</div>
-        <div class="text-subtitle2">{{item.desc}}</div>
+        <div class="text-h6">{{produtos.titulo}}</div>
+        <div class="text-subtitle2">{{produtos.desc}}</div>
       </q-card-section>
     </q-card>
   </div>
@@ -13,9 +13,13 @@
 </template>
 ...
 <script>
+
+import axios from "axios";
+
 export default {
   data () {
     return {
+      produtos: [],
       item: [
         {
           photo: "https://placeimg.com/500/300/nature?t=" + Math.random(),
@@ -33,7 +37,7 @@ export default {
           photo: "https://placeimg.com/500/300/nature?t=" + Math.random(),
           type: "free",
           desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-          titulo: "",
+          titulo: "Titulo 3",
         },
         {
           photo: "https://placeimg.com/500/300/nature?t=" + Math.random(),
@@ -55,6 +59,22 @@ export default {
         },
       ],
     }
+  },
+
+  methods:{
+    getProdutos() {
+      axios
+      .get("http://127.0.0.1:8000/api/v1/produtos")
+      .then((res) => {
+              console.log(res.data)
+      })
+      .catch((error) => {
+              console.log(error);
+      })
+    }
+  },
+  created() {
+    this.getProdutos()
   }
 }
 </script>
