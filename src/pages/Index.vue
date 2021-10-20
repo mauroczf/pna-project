@@ -11,7 +11,7 @@
   </div>
 </div>
 </template>
-
+...
 <script>
 export default {
   data () {
@@ -33,7 +33,7 @@ export default {
           photo: "https://placeimg.com/500/300/nature?t=" + Math.random(),
           type: "free",
           desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-          titulo: "Titulo 3",
+          titulo: "",
         },
         {
           photo: "https://placeimg.com/500/300/nature?t=" + Math.random(),
