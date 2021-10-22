@@ -7,7 +7,9 @@ const routes = [
       { path: '/livros', component: () => import('pages/Livros.vue') },
       { path: '/produtos', component: () => import('pages/Produtos.vue') },
       { path: '/cadastrarprodutos', component: () => import('pages/CadastrarProdutos.vue') },
-      { path: '/cadastrarlivros', component: () => import('pages/CadastrarLivros.vue') }
+      { path: '/cadastrarlivros', component: () => import('pages/CadastrarLivros.vue') },
+      { path: '/editarprodutos', component: () => import('pages/EditarProdutos.vue') },
+      { path: '/editarlivros', component: () => import('pages/EditarLivros.vue') }
     ]
   },
 

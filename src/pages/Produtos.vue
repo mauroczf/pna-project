@@ -12,8 +12,7 @@
       </q-card-section>
       <q-card-actions align="right">
         <q-btn flat round color="red" icon="delete" class="deletar" @click="deletar(produtos.id)"/>
-        <q-btn flat round color="dark-grey" icon="edit" />
-        <!-- <q-btn flat round color="primary" icon="share" /> -->
+        <q-btn flat round color="dark-grey" icon="edit" class="update" @click="update(produtos.id)"/>
       </q-card-actions>
     </q-card>
   </div>
