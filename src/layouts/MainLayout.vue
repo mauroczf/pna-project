@@ -59,6 +59,16 @@ const linksList = [
     icon: 'computer',
     link: '/produtos'
   },
+  {
+    title: 'Cadastrar Produtos',
+    icon: 'add',
+    link: '/cadastrarprodutos'
+  },
+  {
+    title: 'Cadastrar Livros',
+    icon: 'add',
+    link: '/cadastrarlivros'
+  },
 
 ];
 
