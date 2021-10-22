@@ -13,7 +13,7 @@
       </q-card-section>
       <q-card-actions align="right">
         <q-btn flat round color="red" icon="delete" class="deletar" @click="deletar(livros.id)"/>
-        <q-btn flat round color="dark-grey" icon="edit" />
+        <q-btn flat round color="dark-grey" icon="edit" class="editar" @click="editar(livros.id)" />
         <!-- <q-btn flat round color="primary" icon="share" /> -->
       </q-card-actions>
     </q-card>
